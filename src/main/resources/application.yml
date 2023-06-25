@@ -1,0 +1,20 @@
+spring:
+  # MySQL setting
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/toy?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8
+    username: byeonghun
+    password: byeonghun
+  
+
+  jpa:
+    # JPA 쿼리문 확인
+    show-sql: true
+    # DDL(create, alter, drop) 정의시 DB의 고유 기능을 사용할 수 있다.
+    hibernate:
+      ddl-auto: update
+    # JPA의 구현체인 Hibernate가 동작하면서 발생한 SQL의 가독성을 높여준다.
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: true
