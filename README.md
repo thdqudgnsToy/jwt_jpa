@@ -71,7 +71,30 @@ JWT를 적용시키기 전에, JPA 연동과 테스트코드 작성을 먼저 �
     - jakarta.mail: 메일
     - spring-context-support
    
+<img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/c751983f-ebde-4e61-8ffb-64eabb3ac424" width="800px">
+
+
 스프링 부트 파일을 만들고 바로 실행하면 dataSource가 정의되지 않았다는 에러메세지가 나온다. 그러므로 DB 연결을 먼저 해줘야 한다.
 
-<img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/c751983f-ebde-4e61-8ffb-64eabb3ac424" width="800px">
+<img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/54105de9-213e-46f3-b05a-eb87fa1dabb6" width="800px">
+
+
+src/main/resources/application.yml 파일에서 설정해주자
+
+<img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/c2efe4e8-d78b-4993-b9b0-820ca9780b37" width="800px">
+
+
+이제 MVC 패턴을 적용시키려고 한다. 어떻게 구성해야 할까?
+지금까지 해왔던 프로젝트는 JDBC만 사용하거나 MyBatis를 활용했다.
+
+<img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/78ea7023-87b2-4dce-b579-85e264a95d35" width="800px">
+
+
+DB 연결 부분을 JPA로 갈아끼워보자.
+
+<img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/20b1c25c-bee1-423b-bf45-cadbcebf227e" width="800px">
+
+<img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/dc5c37dd-a55f-4925-a36f-d326a1dc0ca3" width="800px">
+
+
 
