@@ -18,3 +18,8 @@ spring:
       hibernate:
         format_sql: true
     open-in-view: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
