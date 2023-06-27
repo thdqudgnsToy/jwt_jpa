@@ -12,7 +12,7 @@ spring:
     show-sql: true
     # DDL(create, alter, drop) 정의시 DB의 고유 기능을 사용할 수 있다.
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     # JPA의 구현체인 Hibernate가 동작하면서 발생한 SQL의 가독성을 높여준다.
     properties:
       hibernate:
