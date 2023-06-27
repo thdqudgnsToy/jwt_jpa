@@ -160,7 +160,7 @@ class MemberServiceImplTest {
         memberService.join(member1);
         memberService.join(member2);
 
-        memberService.delete(member1);
+        memberService.delete(member1.getNo());
 
         assertEquals(0, memberService.findMemberByName("memberA").getUsed());
         assertEquals(1, memberService.findMemberByName("memberB").getUsed());

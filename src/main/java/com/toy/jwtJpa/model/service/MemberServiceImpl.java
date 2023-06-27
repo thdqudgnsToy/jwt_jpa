@@ -4,11 +4,13 @@ import com.toy.jwtJpa.model.domain.Member;
 import com.toy.jwtJpa.model.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class MemberServiceImpl implements MemberService {
 
     private final MemberRepository memberRepository;
@@ -49,7 +51,7 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public void delete(Member member) throws Exception {
-        memberRepository.unUsed(member);
+    public void delete(Long no) throws Exception {
+        memberRepository.unUsed(no);
     }
 }

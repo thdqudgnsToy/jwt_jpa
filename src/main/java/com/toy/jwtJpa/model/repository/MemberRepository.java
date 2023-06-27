@@ -79,7 +79,8 @@ public class MemberRepository {
     /**
      * 회원 비활성화
      */
-    public void unUsed(Member member) {
+    public void unUsed(Long no) {
+        Member member = findOne(no);
         member.setUsed(0);
     }
 }

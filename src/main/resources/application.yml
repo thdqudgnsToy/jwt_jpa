@@ -20,6 +20,10 @@ spring:
     open-in-view: true
 
 server:
-  port: 8080
+  port: 80
   servlet:
     context-path: /
+
+logging:
+  level:
+    web: debug

@@ -44,5 +44,5 @@ public interface MemberService {
     /**
      * 회원 비활성화
      */
-    void delete(Member member) throws Exception;
+    void delete(Long no) throws Exception;
 }
