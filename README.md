@@ -30,3 +30,48 @@ JWT를 적용시키기 전에, JPA 연동과 테스트코드 작성을 먼저 �
 - Jar 와 War : Jar는 Java 프로젝트를 압축한 파일이고, War은 웸 어플리케이션 압축 파일입니다. War가 사이즈가 더 크고, 그만큼 사전에 정의된 구조가 있습니다. War 파일을 실행하려면 웹서버 또는 WAS가 필요합니다. Spring Boot 에서 가이드 하는 표준은 Jar이며, Jar만으로도 충분하기에 Jar을 선택했습니다.
 - Java 11
 - Dependencies : 어떤 기능이 필요한지에 따라 추가하는 라이브러리입니다.
+  - Lombok:
+    - RequiredArgsConstructor: final을 추가한 멤버에 Bean을 주입해준다.
+    - Getter / Setter / Data: 기본으로 작성하는 메소드들을 대신 작성해준다.
+    - Slf4j: 로그를 찍도록 도와준다.
+  - Spring Boot Dev Tools:
+    - spring-boot-autoconfigure
+    - spring-context
+      - spring-aop/beans/core
+    - spring-core
+  - Spring Web: (spring-boot-starter-web)
+    - spring-boot-starter-json: JSON
+      - jackson-databind: 데이터 바인드
+    - spring-boot-starter-tomcat: 톰캣
+    - spring-web/webmvc: 웹MVC
+    - spring-boot-starter-test
+      - assertj-core: 어썰트J
+      - junit-jupiter: JUnit
+      - mockito-core: 모키토
+      - mockito-junit-core
+      - jsonassert
+      - spring-test
+      - xmlunit-core
+  - MySQL Driver:
+    - mysql-connector-j: MySQL 커넥터
+  - Spring Data JPA:
+    - persistence-api: 영속성
+    - transaction-api: 트랜잭션
+    - hibernate-core: 하이버네이트
+    - spring-boot-starter-aop
+    - spring-boot-starter-jdbc
+      - HikariCP: 히카리 커넥션 풀링
+      - spring-jdbc: JDBC
+    - spring-data-jpa
+      - slf4j-api: SLF4J 로깅
+      - spring-data-commons
+    - spring-aspect
+      - aspectweaver
+  - Java Mail Sender: (spring-boot-starter-mail)
+    - jakarta.mail: 메일
+    - spring-context-support
+   
+스프링 부트 파일을 만들고 바로 실행하면 dataSource가 정의되지 않았다는 에러메세지가 나온다. 그러므로 DB 연결을 먼저 해줘야 한다.
+
+<img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/c751983f-ebde-4e61-8ffb-64eabb3ac424" width="800px">
+
