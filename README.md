@@ -13,6 +13,8 @@
 
 JWT를 적용시키기 전에, JPA 연동과 테스트코드 작성을 먼저 했습니다. (2023.06.27)
 
+# 설정
+
 <img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/36ad53f5-f2a7-44c7-8072-6d9e67b5b3db" width="800px">
 
 - Gradle 적용 : 지난 board 토이프로젝트에서는 Maven으로 빌드했었는데, 이번에는 Gradle로 했습니다. Maven은 익숙했습니다. pom.xml로 라이브러리를 가져오고, [mvnrepository 사이트](https://mvnrepository.com/)에서 필요한 라이브러리들을 가져오는 것도 괜찮았습니다. 그러다 Gradle의 빌드 성능이 좋다는 말을 듣고 처음 적용시켰습니다. Gradle은 유연함과 성능에 초점을 둔 오픈소스 빌드도구입니다. 이전의 빌드 도구였던 Ant와 Maven을 보완하여 나온만큼 장점이 많습니다. 먼저 Gradle과 Maven의 성능 차이를 보겠습니다.
@@ -89,6 +91,7 @@ src/main/resources/application.yml 파일에서 설정해주자
 
 <img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/78ea7023-87b2-4dce-b579-85e264a95d35" width="800px">
 
+# JPA
 
 DB 연결 부분을 JPA로 갈아끼워보자.
 
@@ -96,7 +99,6 @@ DB 연결 부분을 JPA로 갈아끼워보자.
 
 <img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/aedad144-89dd-4e4e-8503-f260cc6c94d9" width="800px">
 
----
 
 JPA 엔티티의 생명주기는 다음과 같다.
 
@@ -108,6 +110,9 @@ EntityManager가 엔티티를 생성한다. 이 코드에서는 Spring Data JPA�
 
 ---
 
+# 테스트코드
+
+[코드](https://github.com/thdqudgnsToy/jwt_jpa/blob/main/src/test/java/com/toy/jwtJpa/model/service/MemberServiceImplTest.java)
 
 
 
