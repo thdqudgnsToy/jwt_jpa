@@ -94,7 +94,21 @@ DB 연결 부분을 JPA로 갈아끼워보자.
 
 <img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/20b1c25c-bee1-423b-bf45-cadbcebf227e" width="800px">
 
-<img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/dc5c37dd-a55f-4925-a36f-d326a1dc0ca3" width="800px">
+<img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/aedad144-89dd-4e4e-8503-f260cc6c94d9" width="800px">
+
+---
+
+JPA 엔티티의 생명주기는 다음과 같다.
+
+<img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/d2da16ff-91aa-4da7-8c47-b474a9a1f420" width="800px">
+
+EntityManager가 엔티티를 생성한다. 이 코드에서는 Spring Data JPA의 도움으로 인스턴스를 주입받아 생성된다. 결합도가 떨어져서 유지보수성이 증가한다.
+그 후, persist(), find(), createQuery() 등의 메소드를 호출하는 것이 JPA를 사용하는 것이다.
+[Reposiroty](https://github.com/thdqudgnsToy/jwt_jpa/blob/main/src/main/java/com/toy/jwtJpa/model/repository/MemberRepository.java) 파일을 보면 직관적으로 알 수 있다.
+
+---
+
+
 
 
 
