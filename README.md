@@ -31,44 +31,44 @@ JWT를 적용시키기 전에, JPA 연동과 테스트코드 작성을 먼저 �
 - Java 11
 - Dependencies : 어떤 기능이 필요한지에 따라 추가하는 라이브러리입니다.
   - Lombok:
-    - RequiredArgsConstructor: final을 추가한 멤버에 Bean을 주입해준다.
-    - Getter / Setter / Data: 기본으로 작성하는 메소드들을 대신 작성해준다.
-    - Slf4j: 로그를 찍도록 도와준다.
+    - RequiredArgsConstructor: [ final을 추가한 멤버에 Bean을 주입해준다. ]
+    - Getter / Setter / Data: [ 기본으로 작성하는 메소드들을 대신 작성해준다. ]
+    - Slf4j: [ 로그를 찍도록 도와준다. ]
   - Spring Boot Dev Tools:
     - spring-boot-autoconfigure
     - spring-context
       - spring-aop/beans/core
     - spring-core
   - Spring Web: (spring-boot-starter-web)
-    - spring-boot-starter-json: JSON
-      - jackson-databind: 데이터 바인드
-    - spring-boot-starter-tomcat: 톰캣
-    - spring-web/webmvc: 웹MVC
+    - spring-boot-starter-json: [ JSON ]
+      - jackson-databind: [ 데이터 바인드 ]
+    - spring-boot-starter-tomcat: [ 톰캣 ]
+    - spring-web/webmvc: [ 웹 MVC ]
     - spring-boot-starter-test
-      - assertj-core: 어썰트J
-      - junit-jupiter: JUnit
-      - mockito-core: 모키토
+      - assertj-core: [ 어썰트J ]
+      - junit-jupiter: [ JUnit ]
+      - mockito-core: [ 모키토 ]
       - mockito-junit-core
       - jsonassert
       - spring-test
       - xmlunit-core
   - MySQL Driver:
-    - mysql-connector-j: MySQL 커넥터
+    - mysql-connector-j: [ MySQL 커넥터 ]
   - Spring Data JPA:
-    - persistence-api: 영속성
-    - transaction-api: 트랜잭션
-    - hibernate-core: 하이버네이트
+    - persistence-api: [ 영속성 ]
+    - transaction-api: [ 트랜잭션 ]
+    - hibernate-core: [ 하이버네이트 ]
     - spring-boot-starter-aop
     - spring-boot-starter-jdbc
-      - HikariCP: 히카리 커넥션 풀링
-      - spring-jdbc: JDBC
+      - HikariCP: [ 히카리 커넥션 풀링 ]
+      - spring-jdbc: [ JDBC ]
     - spring-data-jpa
-      - slf4j-api: SLF4J 로깅
+      - slf4j-api: [ SLF4J 로깅 ]
       - spring-data-commons
     - spring-aspect
       - aspectweaver
   - Java Mail Sender: (spring-boot-starter-mail)
-    - jakarta.mail: 메일
+    - jakarta.mail: [ 메일 ]
     - spring-context-support
    
 <img src="https://github.com/thdqudgnsToy/jwt_jpa/assets/92148521/c751983f-ebde-4e61-8ffb-64eabb3ac424" width="800px">
